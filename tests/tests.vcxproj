@@ -127,7 +127,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Company.cpp" />
+    <ClCompile Include="Director.cpp" />
+    <ClCompile Include="Division.cpp" />
+    <ClCompile Include="Employee.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Menager.cpp" />
+    <ClCompile Include="Request.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Company.h" />
+    <ClInclude Include="Director.h" />
+    <ClInclude Include="Division.h" />
+    <ClInclude Include="Employee.h" />
+    <ClInclude Include="Menager.h" />
+    <ClInclude Include="Request.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
