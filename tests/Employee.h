@@ -32,6 +32,7 @@ public:
 	int getHour()const;
 
 	virtual string type()const;
+
 	virtual void show()const;
 
 
