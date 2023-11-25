@@ -14,8 +14,8 @@ protected:
 	int hour;
 
 public:
-	Employee(string name, string surname, string position, double salary, bool status,int hour);
-	virtual ~Employee()=0;
+	Employee(string name, string surname, string position, double salary,int hour);
+	virtual ~Employee();
 
 	void setName(string name);
 	void setSurname(string surname);
