@@ -7,7 +7,6 @@ class Company
 	vector <Division*>division;
 	vector <Employee*>employee;
 public:
-
 	Company(Employee* director);
 	~Company();
 

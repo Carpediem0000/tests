@@ -6,6 +6,7 @@ class Director :
 {
     vector<Employee*> menager;
 public:
+    Director();
     Director(string name, string surname, double salary, int hour, string position= "Director");
     ~Director();
 

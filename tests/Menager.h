@@ -8,6 +8,7 @@ protected:
     vector<Employee*> employees;
 
 public:
+    Menager();
     Menager(string name, string surname, double salary, int hour, string position = "Menager");
     ~Menager();
 

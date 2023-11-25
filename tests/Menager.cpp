@@ -1,6 +1,10 @@
 #include "Menager.h"
 
-Menager::Menager(string name, string surname, double salary, int hour, string position = "Menager")
+Menager::Menager()
+{
+}
+
+Menager::Menager(string name, string surname, double salary, int hour, string position)
     :Employee(name, surname,position, salary, hour){}
 
 Menager::~Menager()

@@ -69,13 +69,19 @@ void Company::removeEmployee(int ind)
 }
 
 void Company::show() const
-{}
+{
+	cout << "dkflkd" << endl;
+	for (int i = 0; i < employee.size(); i++)
+	{
+		employee[i]->show();
+	}
+}
 
 void Company::save()
 {
 	FILE* file = nullptr;
 	fopen_s(&file, "test_1.bin", "wb");
-	if (file =NULL)
+	if (file == NULL)
 	{
 		return;
 	}
@@ -93,7 +99,7 @@ void Company::load()
 {
 	FILE* file = nullptr;
 	fopen_s(&file, "test_1.bin", "rb");
-	if (file = NULL)
+	if (file ==  NULL)
 	{
 		return;
 	}
@@ -101,8 +107,8 @@ void Company::load()
 	{
 		while (!feof(file))
 		{
-			Employee* obj;
-			fread(obj, sizeof(Employee), 1, file);
+			Employee*  obj;
+			fread(&obj, sizeof(Employee), 1, file);
 			addEmployee(obj);
 		}
 	}

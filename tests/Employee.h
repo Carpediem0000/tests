@@ -16,6 +16,7 @@ protected:
 	int hour;
 
 public:
+	Employee();
 	Employee(string name, string surname, string position, double salary,int hour);
 	virtual ~Employee();
 

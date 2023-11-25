@@ -1,5 +1,16 @@
 #include "Employee.h"
 
+Employee::Employee()
+{
+	setName("undefined");
+	setSurname("undefined");
+	setPosition("undefined");
+	setSalary(0);
+	setHour(0);
+	this->status = true;
+	this->bonus = 0;
+}
+
 Employee::Employee(string name, string surname, string position, double salary, int hour)
 {
 	setName(name);

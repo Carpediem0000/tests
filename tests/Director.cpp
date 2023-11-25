@@ -1,6 +1,10 @@
 #include "Director.h"
 
-Director::Director(string name, string surname, double salary, int hour, string position = "Director")
+Director::Director()
+{
+}
+
+Director::Director(string name, string surname, double salary, int hour, string position)
     :Employee(name, surname, position, salary, hour){}
 
 Director::~Director()
