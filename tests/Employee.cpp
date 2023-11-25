@@ -8,6 +8,7 @@ Employee::Employee(string name, string surname, string position, double salary, 
 	setSalary(salary);
 	setHour(hour);
 	this->status = true;
+	this->bonus = 0;
 }
 
 Employee::~Employee()
@@ -32,6 +33,11 @@ void Employee::setPosition(string position)
 void Employee::setSalary(double salary)
 {
 	this->salary = salary;
+}
+
+void Employee::setBonus(double bonus)
+{
+	this->bonus = bonus;
 }
 
 void Employee::changeStatus()
@@ -65,6 +71,11 @@ string Employee::getPosition() const
 double Employee::getSalary() const
 {
 	return salary;
+}
+
+double Employee::getBonus() const
+{
+	return bonus;
 }
 
 bool Employee::getStatus() const
@@ -103,3 +114,16 @@ void Employee::show() const
 		cout << RED_COLOR << "weekend" << RESET_COLOR << endl;
 	}
 }
+
+void Employee::save(FILE* file)
+{
+	if (file == NULL)
+	{
+		return;
+	}
+	else
+	{
+		fwrite(this, sizeof(class Employee), 1, file);
+	}
+}
+

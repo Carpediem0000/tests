@@ -21,5 +21,8 @@ public:
 	void removeEmployee(int ind);
 
 	void show()const;
+
+	void save();
+	void load();
 };
 

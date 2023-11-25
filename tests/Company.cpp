@@ -70,3 +70,43 @@ void Company::removeEmployee(int ind)
 
 void Company::show() const
 {}
+
+void Company::save()
+{
+	FILE* file = nullptr;
+	fopen_s(&file, "test_1.bin", "wb");
+	if (file =NULL)
+	{
+		return;
+	}
+	else
+	{
+		for (int i = 0; i < employee.size(); i++)
+		{
+			employee[i]->save(file);
+		}
+	}
+	fclose(file);
+}
+
+void Company::load()
+{
+	FILE* file = nullptr;
+	fopen_s(&file, "test_1.bin", "rb");
+	if (file = NULL)
+	{
+		return;
+	}
+	else
+	{
+		while (!feof(file))
+		{
+			Employee* obj;
+			fread(obj, sizeof(Employee), 1, file);
+			addEmployee(obj);
+		}
+	}
+	fclose(file);
+
+}
+
